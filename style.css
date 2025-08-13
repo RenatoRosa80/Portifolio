@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background-color: #eef5f9;
+}
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #00b3cc;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.25s ease-out;
+}
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, #004d66, #007799);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+.sidebar h1 {
+    font-size: 22px;
+    margin: 10px 0 0;
+}
+.sidebar h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+    color: #cce7f0;
+}
+.sidebar .role {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid white;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.menu a:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.menu a.active {
+    background-color: #00b3cc;
+    font-weight: bold;
+}
+.contact p,
+.languages p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.languages h3,
+.skills h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #cce7f0;
+    padding-bottom: 5px;
+}
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+.skills li {
+    background-color: rgba(255,255,255,0.1);
+    padding: 6px;
+    margin: 4px 0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.download-btn {
+    display: block;
+    background-color: #00b3cc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.download-btn:hover {
+    background-color: #00d4e3;
+}
+.content {
+    margin-left: 300px;
+    padding: 20px;
+    max-width: 900px;
+}
+.content h2 {
+    color: #004d66;
+    border-bottom: 2px solid #004d66;
+    padding-bottom: 5px;
+}
+.experience {
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.experience:hover {
+    transform: translateY(-3px);
+}
+.experience h3 {
+    margin: 0;
+    color: #006680;
+}
+.experience p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+.experience ul {
+    margin: 5px 0 0 20px;
+}
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
